@@ -1,7 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# Installateur Vesta
-# Télécharge et installe Vesta depuis les releases
+# Installateur Vesta pour Linux
 # =============================================================================
 
 set -e
@@ -41,11 +40,12 @@ ARCH=$(uname -m)
 
 print_info "Système détecté: $OS $ARCH"
 
-# Linux uniquement pour l'instant
+# Linux uniquement
 if [ "$OS" != "Linux" ]; then
-    echo "❌ Ce script supporte uniquement Linux pour l'instant."
-    echo "Pour Windows/macOS, téléchargez manuellement depuis:"
-    echo "https://github.com/$REPO/releases"
+    echo "❌ Ce script est pour Linux uniquement."
+    echo ""
+    echo "Pour Windows ou macOS, téléchargez manuellement :"
+    echo "  https://github.com/$REPO/releases/latest"
     exit 1
 fi
 
