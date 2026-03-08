@@ -1,9 +1,8 @@
-# 🔧 RustDesk Helper
+# 🔧 Vesta
 
-**Application graphique pour RustDesk - Aide à distance simplifiée**
+**Suite d'outils pour assistance à distance et administration système**
 
-Ce repo contient les **binaires compilés** de RustDesk Helper.  
-Pour le code source, voir : [github.com/demiton/vesta](https://github.com/demiton/vesta) (privé)
+Vesta est une application graphique qui simplifie l'installation et la gestion d'outils d'aide à distance, notamment RustDesk, avec une interface intuitive et accessible à tous.
 
 ---
 
@@ -19,13 +18,13 @@ Ou manuellement :
 
 ```bash
 # Télécharger
-curl -LO https://github.com/demiton/vesta-releases/releases/latest/download/rustdesk-helper-linux.AppImage
+curl -LO https://github.com/demiton/vesta-releases/releases/latest/download/vesta-linux.AppImage
 
 # Rendre exécutable
-chmod +x rustdesk-helper-linux.AppImage
+chmod +x vesta-linux.AppImage
 
 # Lancer
-./rustdesk-helper-linux.AppImage
+./vesta-linux.AppImage
 ```
 
 ---
@@ -34,31 +33,42 @@ chmod +x rustdesk-helper-linux.AppImage
 
 | Plateforme | Fichier | Taille |
 |------------|---------|--------|
-| **Linux** | [rustdesk-helper-linux.AppImage](https://github.com/demiton/vesta-releases/releases/latest/download/rustdesk-helper-linux.AppImage) | ~100 MB |
+| **Linux** | [vesta-linux.AppImage](https://github.com/demiton/vesta-releases/releases/latest/download/vesta-linux.AppImage) | ~100 MB |
 
 ---
 
 ## 🎯 Fonctionnalités
 
-### 🙋 Mode "Je veux recevoir de l'aide"
-- Installe RustDesk automatiquement
-- Génère un mot de passe sécurisé
-- Affiche l'ID et le mot de passe
+### 🙋 Mode "Recevoir de l'aide"
+- Installation automatique de RustDesk
+- Génération d'un mot de passe sécurisé
+- Affichage de l'ID et du mot de passe
 - Boutons "📋 Copier" pour partager facilement
+- Activation/Désactivation du service à volonté
 
 ### 🖥️ Mode "Aider quelqu'un"
-- Télécharge RustDesk dans `~/Applications/`
+- Téléchargement automatique des outils dans `~/Applications/`
 - Barre de progression en temps réel
-- Instructions de connexion
+- Instructions de connexion pas à pas
+- Support multi-plateforme (Linux, Windows, macOS)
 
 ---
 
-## 🛠️ Compilation depuis les sources
+## 🛠️ Technologies supportées
 
-Le code source est privé. Si vous avez besoin d'une version modifiée, contactez l'auteur.
+Actuellement, Vesta prend en charge :
+- **RustDesk** : Outil d'aide à distance open-source
+
+*D'autres outils seront ajoutés dans les futures versions.*
 
 ---
 
 ## 📄 Licence
 
-MIT - Voir le repo source pour les détails.
+MIT
+
+---
+
+## 📝 Notes
+
+Cette application est distribuée sous forme de binaires pré-compilés. Pour toute question ou suggestion, utilisez les Issues de ce repository.

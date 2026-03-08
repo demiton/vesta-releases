@@ -1,7 +1,7 @@
 #!/bin/bash
 # =============================================================================
-# Installateur RustDesk Helper
-# Télécharge et installe RustDesk Helper depuis les releases publiques
+# Installateur Vesta
+# Télécharge et installe Vesta depuis les releases
 # =============================================================================
 
 set -e
@@ -31,7 +31,7 @@ print_warning() {
 # Bannière
 echo ""
 echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║         🔧 Installation RustDesk Helper                      ║"
+echo "║         🔧 Installation Vesta                                ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
 
@@ -56,11 +56,11 @@ if [ ! -d "$INSTALL_DIR" ]; then
 fi
 
 # Télécharger
-FILENAME="rustdesk-helper-linux.AppImage"
+FILENAME="vesta-linux.AppImage"
 URL="https://github.com/$REPO/releases/$VERSION/download/$FILENAME"
 DEST="$INSTALL_DIR/$FILENAME"
 
-print_info "Téléchargement de RustDesk Helper..."
+print_info "Téléchargement de Vesta..."
 echo "   URL: $URL"
 echo "   Destination: $DEST"
 echo ""
@@ -82,10 +82,10 @@ print_success "Fichier rendu exécutable"
 DESKTOP_DIR="$HOME/.local/share/applications"
 mkdir -p "$DESKTOP_DIR"
 
-cat > "$DESKTOP_DIR/rustdesk-helper.desktop" << EOF
+cat > "$DESKTOP_DIR/vesta.desktop" << EOF
 [Desktop Entry]
-Name=RustDesk Helper
-Comment=Aide à distance simplifiée
+Name=Vesta
+Comment=Suite d'outils pour assistance à distance
 Exec=$DEST
 Icon=$DEST
 Type=Application
@@ -94,7 +94,7 @@ Terminal=false
 StartupNotify=true
 EOF
 
-chmod +x "$DESKTOP_DIR/rustdesk-helper.desktop"
+chmod +x "$DESKTOP_DIR/vesta.desktop"
 print_success "Raccourci créé"
 
 # Mettre à jour la base de données
@@ -115,5 +115,5 @@ echo "   $DEST"
 echo ""
 echo "🗑️  Pour désinstaller:"
 echo "   rm $DEST"
-echo "   rm $DESKTOP_DIR/rustdesk-helper.desktop"
+echo "   rm $DESKTOP_DIR/vesta.desktop"
 echo ""
